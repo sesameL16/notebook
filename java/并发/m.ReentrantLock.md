@@ -14,7 +14,7 @@
 
    如果减一操作后，state值为0，则调用LockSupport的unpark方法唤醒该线程后的等待队列中的第一个后继线程(pthreade_mutex_unlock)，将其唤醒，使之能够获取到对象的锁(release时，对于公平锁与非公平锁的处理逻辑是一致的);
 
-   之所以调用release方法后。state值可能不为零，原因在于ReentrantLock是可里入锁，表示线程可以多次调用lock方法，导致每调用一次，state值都会加一。
+   之所以调用release方法后。state值可能不为零，原因在于ReentrantLock是可重入锁，表示线程可以多次调用lock方法，导致每调用一次，state值都会加一。
 
 4. 对于ReentrantLock来说，所谓的上锁.本质上就是对AQS中的state成员变量的操作:对该成员变量+1，表示上锁;对该成员变量-1,表示释放锁。
 
