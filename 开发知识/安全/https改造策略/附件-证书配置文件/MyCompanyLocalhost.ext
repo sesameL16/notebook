@@ -1,0 +1,10 @@
+
+subjectAltName = @alt_names
+extendedKeyUsage = serverAuth
+
+[alt_names]
+
+# 域名，如有多个用DNS.2,DNS.3…来增加
+DNS.1 = www.ses.com
+# IP地址
+IP.1 = 10.1.12.3
