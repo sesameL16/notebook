@@ -40,7 +40,7 @@
 
    显示当前系统的实时数据面板，按 ctrl+c 即可退出。
 
-   ![20190730154952](F:\notebook\图片\Arthas\20190730154952.png)
+   ![20190730154952](H:\笔记\图片\Arthas\20190730154952.png)
 
 2.  thread
 
@@ -48,17 +48,17 @@
 
    thread id， 显示指定线程的运行堆栈：thread 20
 
-   ![img](F:\notebook\图片\Arthas\20190730163759.png)
+   ![img](H:\笔记\图片\Arthas\20190730163759.png)
 
    显示当前最忙的前N个线程并打印堆栈：thread -n 3
 
-   ![img](F:\notebook\图片\Arthas\20190730163734.png)
+   ![img](H:\笔记\图片\Arthas\20190730163734.png)
 
 3.  sc
 
    查看 JVM 已加载的类详细信息:sc -d *Test
 
-   ![img](F:\notebook\图片\Arthas\20190730155704.png)
+   ![img](H:\笔记\图片\Arthas\20190730155704.png)
 
 4.  sm
 
@@ -66,7 +66,7 @@
 
    sm -d cn.javastack.springbootbestpractice.SpringBootBestPracticeApplication main
 
-   ![img](F:\notebook\图片\Arthas\20190730160555.png)
+   ![img](H:\笔记\图片\Arthas\20190730160555.png)
 
 5.  jad
 
@@ -74,7 +74,7 @@
 
    jad cn.javastack.springbootbestpractice.SpringBootBestPracticeApplication
 
-   ![img](F:\notebook\图片\Arthas\20190730155942.png)
+   ![img](H:\笔记\图片\Arthas\20190730155942.png)
 
 6.  trace
 
@@ -82,7 +82,7 @@
 
    -j：表示跳过 JDK 中的方法路径
 
-   ![img](F:\notebook\图片\Arthas\20190730165157.png)
+   ![img](H:\笔记\图片\Arthas\20190730165157.png)
 
 7.  monitor
 
@@ -92,7 +92,7 @@
 
    -c 5：表示每5秒统计一次，统计周期，默认值为120秒
 
-   ![img](F:\notebook\图片\Arthas\20190730170442.png)
+   ![img](H:\笔记\图片\Arthas\20190730170442.png)
 
    监控维度说明：
 
@@ -113,7 +113,7 @@
 
    watch cn.javastack.springbootbestpractice.web.JsonTest getUserInfo '{params, returnObj}' -x 2 -b
 
-   ![img](F:\notebook\图片\Arthas\20190730171659.png)
+   ![img](H:\笔记\图片\Arthas\20190730171659.png)
 
    以上监控的是一个方法的入参情况，在方法执行前监控：-b，遍历深度：-x 2
 
@@ -129,7 +129,7 @@
     
     以上演示了 10 个命令的基本使用，各种命令的使用详情可以在命令带 `--help` 进行查阅
     
-    ![img](F:\notebook\图片\Arthas\20190730172757.png)
+    ![img](H:\笔记\图片\Arthas\20190730172757.png)
 
 总结下来，使用 Arthas 可以很方便的诊断一个 Java 应用程序，如：系统数据面板、JVM实时运行状态、类加载情况、监控方法执行情况、显示方法执行路径等。
 
